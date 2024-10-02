@@ -7,8 +7,9 @@ navToggle.addEventListener('click', () => {
 });
 
 
-/* console.clear();
-gsap.registerPlugin(ScrollTrigger) 
+console.clear();
+
+gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener("load", () => {
   gsap
@@ -37,4 +38,4 @@ window.addEventListener("load", () => {
       },
       "<"
     );
-}); */
+});
