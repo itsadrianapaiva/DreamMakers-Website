@@ -1,10 +1,3 @@
-const navToggle = document.getElementById('navToggle');
-
-
-navToggle.addEventListener('click', () => {
-  const navMenu = document.getElementById('navMenu');
-  navMenu.classList.toggle('active');
-});
 
 
 console.clear();
@@ -20,7 +13,7 @@ window.addEventListener("load", () => {
         end: "+=150%",
         pin: true,
         scrub: true,
-        markers: true
+        markers: false
       }
     })
     .to("img", {
@@ -38,4 +31,12 @@ window.addEventListener("load", () => {
       },
       "<"
     );
+});
+
+const navToggle = document.getElementById('navToggle');
+
+
+navToggle.addEventListener('click', () => {
+  const navMenu = document.getElementById('navMenu');
+  navMenu.classList.toggle('active');
 });
