@@ -242,7 +242,7 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 50%;
+  height: 48%;
 }
 
 .service-card-details h3 {
@@ -270,7 +270,6 @@ nav {
   font-size: 1rem;
   margin-top: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .testimonials {
