@@ -12,6 +12,7 @@
   --quaternary-color: #999;
   --quinary-color: #ccc;
   --senary-color: #fff;
+  --highlight-color: #D91715;
 }
 
 html {
@@ -35,16 +36,67 @@ body {
   
 } */
 
-/* Navigation Bar */
+
+
+
+.logo {
+  /*flex-grow: 1;*/
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo img {
+  max-width: 100px;
+  
+   /* Adjust size based on your logo */
+}
+
+.header-info {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+  padding-right: 2rem;
+}
+
+.header-info .location {
+ padding-right: 2rem;
+ align-self: center;
+}
+
+.call-to-action {
+  background-color: var(--highlight-color);
+  color: var(--senary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.call-to-action p {
+  text-transform: uppercase;
+}
+
+.call-to-action a {
+  color: var(--senary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 nav {
   width: 100vw;
+  height: 60px;
   background-color: var(--primary-color);
   color: var(--senary-color);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 10px;
 }
 
 /* Left Section - Navigation */
@@ -118,15 +170,7 @@ nav {
   z-index: 10;
 }
 
-/* Center Section - Logo */
-.logo {
-  /*flex-grow: 1;*/
-  text-align: center;
-}
 
-.logo img {
-  max-width: 50px; /* Adjust size based on your logo */
-}
 
 /* Right Section - Social Media Icons */
 .social-media {
