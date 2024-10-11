@@ -23,7 +23,7 @@ window.addEventListener("load", () => {
       ease: "power1.inOut"
     })
     .to(
-      ".section.hero",
+      ".section-hero",
       {
         scale: 1.1,
         transformOrigin: "center center",
