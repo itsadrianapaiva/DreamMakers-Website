@@ -14,18 +14,25 @@
   --senary-color: #fff;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* Container for Flexbox Layout */
 /* .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
+  
 } */
 
 /* Navigation Bar */
@@ -140,6 +147,15 @@ nav {
   transform: scale(1.2);
 }
 
+.page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
 /* hero section */
 
 .wrapper,
@@ -163,6 +179,7 @@ nav {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 .hero-image-container {
@@ -182,23 +199,27 @@ nav {
   height: 100%;
   object-fit: cover;
   object-position: center center;
+  display: block;
 }
 
 .services-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: 2rem 2rem;
-  width: 100%;
+  margin: 8rem auto;
+  width: 90%;
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
 .service-card {
   width: 325px;
+  height: 400px;
   background-color: var(--primary-color);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  margin: 1rem;
+  margin: 1rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -228,6 +249,8 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   gap: 2rem;
+  scroll-snap-align: start;
+  height: 100vh;
 }
 
 .left-section h1 {
@@ -309,6 +332,7 @@ footer {
   bottom: 0;
   width: 100vw;
   display: block;
+  scroll-snap-align: start;
 }
 
 .footer-menu {
