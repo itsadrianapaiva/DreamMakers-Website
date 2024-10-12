@@ -12,11 +12,7 @@
   --quaternary-color: #999;
   --quinary-color: #ccc;
   --senary-color: #fff;
-  --highlight-color: #D91715;
-}
-
-html {
-  overflow-x: hidden;
+  --highlight-color: #d91715;
 }
 
 body {
@@ -28,17 +24,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Container for Flexbox Layout */
-/* .container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  
-} */
-
-
-
-
 .logo {
   /*flex-grow: 1;*/
   padding-left: 2rem;
@@ -46,13 +31,12 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .logo img {
   max-width: 100px;
-  
-   /* Adjust size based on your logo */
+
+  /* Adjust size based on your logo */
 }
 
 .header-info {
@@ -64,8 +48,8 @@ body {
 }
 
 .header-info .location {
- padding-right: 2rem;
- align-self: center;
+  padding-right: 2rem;
+  align-self: center;
 }
 
 .call-to-action {
@@ -85,7 +69,6 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-
 
 nav {
   width: 100vw;
@@ -170,8 +153,6 @@ nav {
   z-index: 10;
 }
 
-
-
 /* Right Section - Social Media Icons */
 .social-media {
   display: flex;
@@ -196,7 +177,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
   width: 100%;
 }
 
@@ -223,7 +203,6 @@ nav {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .hero-image-container {
@@ -246,22 +225,62 @@ nav {
   display: block;
 }
 
-.services-container {
+.numbers-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 8%;
+  background-color: var(--tertiary-color);
+  color: var(--senary-color);
+}
+
+.span-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.numbers-section .count {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.numbers-section .description {
+  font-size: 1.0rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+.services-container:not(.service-header) {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: 8rem auto;
+  margin: 4rem auto;
   width: 100vw;
-  height: 100vh;
-  scroll-snap-align: start;
   gap: 1rem;
   justify-content: center;
+}
+
+.service-header {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.service-header h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--highlight-color);
 }
 
 .service-card {
   width: 325px;
   height: 525px;
-
   background-color: var(--primary-color);
   border-radius: 8px;
   overflow: hidden;
@@ -272,7 +291,6 @@ nav {
 }
 
 .service-card img {
-  
   width: 100%;
   height: 250px;
   object-fit: cover;
@@ -304,11 +322,11 @@ nav {
   flex-grow: 1;
 }
 
-.service-card-details .quote-btn  {
+.service-card-details .quote-btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: var(--senary-color);
-  color: var(--primary-color);
+  background-color: var(--highlight-color);
+  color: var(--senary-color);
   text-decoration: none;
   border-radius: 4px;
   font-size: 1rem;
@@ -317,13 +335,21 @@ nav {
 }
 
 .testimonials {
-  margin: auto;
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   gap: 2rem;
-  scroll-snap-align: start;
-  height: 100vh;
+  width: 100%;
+  margin: 5rem auto;
+  background-color: var(--quinary-color);
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 110%;
+
 }
 
 .left-section h1 {
@@ -332,34 +358,39 @@ nav {
   font-weight: 500;
   color: var(--primary-color);
   line-height: 1.2;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .left-section p {
   color: var(--primary-color);
   margin-bottom: 1rem;
   text-align: justify;
+  text-align: center;
+  width: 60%;
 }
 
-.left-section button {
+.read-more-btn {
   padding: 1rem 2rem;
   margin-top: 1rem;
   outline: none;
-  border: none;
+  border: solid var(--highlight-color) 2px;
   border-radius: 5px;
-  background: linear-gradient(
-    to bottom,
-    var(--primary-color),
-    var(--quaternary-color)
-  );
-  color: var(--senary-color);
+  background: var(--senary-color);
+  color: var(--highlight-color);
   font-size: 1rem;
   cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  width: 30%;
+  text-align: center;
 }
 
 .right-section {
   display: grid;
   gap: 10px;
-  width: 100%;
+  width: 60%;
+  justify-self: center;
 }
 
 .testimonial-card {
@@ -373,23 +404,24 @@ nav {
   cursor: pointer;
 }
 
-.card-content {
+.testimonial-card-content {
   display: flex;
   gap: 5px;
 }
 
-.card-content span i {
+.testimonial-card-content span i {
   font-size: 2rem;
-  color: var(--primary-color);
+  color: var(--highlight-color);
 }
 
-.card-details p {
+.testimonial-card-details p {
   font-style: italic;
   color: var(--primary-color);
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
-.card-details h4 {
+.testimonial-card-details h4 {
   text-align: right;
   color: var(--primary-color);
   font-size: 1rem;
