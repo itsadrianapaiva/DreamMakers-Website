@@ -67,7 +67,7 @@ body {
 .call-to-action a {
   color: var(--senary-color);
   text-decoration: none;
-  cursor: pointer;
+  cursor: default
 }
 
 nav {
